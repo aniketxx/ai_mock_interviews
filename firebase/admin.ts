@@ -13,10 +13,11 @@ function initFirebaseAdmin() {
         clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
         // Replace newlines in the private key
         privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+        
       }),
     });
   }
-
+  
   return {
     auth: getAuth(),
     db: getFirestore(),

@@ -117,7 +117,8 @@ export async function getInterviewsByUserId(
     .where("userId", "==", userId)
     .orderBy("createdAt", "desc")
     .get();
-
+console.log("firebase User ID:", userId);
+console.log("Firebase Project ID:", process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID);
   return interviews.docs.map((doc) => ({
     id: doc.id,
     ...doc.data(),

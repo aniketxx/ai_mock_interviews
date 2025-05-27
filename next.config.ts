@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+require('dotenv').config();
+console.log("Loaded Project ID:", process.env.FIREBASE_PROJECT_ID);
 const nextConfig: NextConfig = {
   /* config options here */
   // images: {
@@ -11,6 +13,7 @@ const nextConfig: NextConfig = {
   //     },
   //   ],
   // },
+  
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -18,5 +21,6 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
 };
+
 
 export default nextConfig;
