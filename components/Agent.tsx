@@ -132,9 +132,9 @@ const Agent = ({
           .join("\n");
       }
 
-      const assistantId = await vapi.createAssistant(interviewer);
+   
 
-      await vapi.start(assistantId, {
+      await vapi.start(interviewer, {
         variableValues: {
           questions: formattedQuestions,
         },
